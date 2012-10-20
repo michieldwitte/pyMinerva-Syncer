@@ -96,9 +96,11 @@ for i in range(0,courseid.__len__()):
     c.setopt(pycurl.WRITEFUNCTION, storagebuffer.write)
     c.perform()
     c.close()
+    html = ""
     html = storagebuffer.getvalue()
     
     #-------------alle folders en files downloaden op die html
+    lines = ""
     lines = html.split("\n")
     for line in lines:
         if "action=download" in line:
@@ -107,6 +109,8 @@ for i in range(0,courseid.__len__()):
                 line = line.replace("http://minerva.ugent.be","")
             if "downloadfolder" in line:
                 extension = ".zip"
+            url = ""
+            filename = ""
             url = str(line.split("\"")[15]).replace("amp;","")
             filename = url.split("path=%2")[1]
             fp = open(coursename[i]+"/"+filename+extension, "wb")
