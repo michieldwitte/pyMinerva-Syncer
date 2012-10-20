@@ -100,7 +100,7 @@ for i in range(0,courseid.__len__()):
     html = storagebuffer.getvalue()
     
     #-------------alle folders en files downloaden op die html
-    lines = ""
+    lines = []
     lines = html.split("\n")
     for line in lines:
         if "action=download" in line:
