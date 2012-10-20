@@ -112,7 +112,7 @@ for i in range(0,courseid.__len__()):
             url = ""
             filename = ""
             url = str(line.split("\"")[15]).replace("amp;","")
-            filename = url.split("path=%2")[1]
+            filename = url.split("path=%2F")[1]
             fp = open(coursename[i]+"/"+filename+extension, "wb")
             
             c = pycurl.Curl()
