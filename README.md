@@ -3,4 +3,4 @@ this is a quick and dirty Python port of Felix Van der Jeugt's bash script miner
 https://github.com/FelixVanderJeugt/minerva-syncer <br \>
 including a gui (wxpython) and written with the "requests" library
 
-##No progressbar or visual feedback so it may appear the program is frozen.
+No progressbar or visual feedback so it may appear the program is frozen.
