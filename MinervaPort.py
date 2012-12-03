@@ -13,7 +13,7 @@ cookie=""
 isThreadRunning=""
 
 def getSalt():
-    global cookie
+	global cookie
 	r = requests.get('https://minerva.ugent.be/secure/index.php?external=true', verify=False)
 	lines = r.text.split("\n")
 	cookie = r.cookies
